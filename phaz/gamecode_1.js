@@ -1,4 +1,3 @@
-	//part 1
 	//config configures the games base
 	var config = {
 		//if browser supports webgl-drawing,
@@ -43,7 +42,6 @@
 	
 	var game = new Phaser.Game(config);
 
-	//part 2
 	//load the files for game in advance
 	function preload ()
 	{
@@ -85,7 +83,7 @@
 		platforms.create(1700, 250, 'ground');
 		platforms.create(300, 250, 'ground');
 		
-		//part 5
+
 		//displays the player and applies physics to the player
 		player = this.physics.add.sprite(100, 450, 'dude');
 
@@ -93,7 +91,7 @@
 		//applies collision to the player
         player.setCollideWorldBounds(true);
 
-		//part 5
+
 		//anims commands animate the player character
         this.anims.create({
             key: 'left',
@@ -142,7 +140,7 @@
 		
 		//physics of bombs
 		 bombs = this.physics.add.group();
-		//part 9
+
 		//score
 		scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 		
@@ -176,7 +174,7 @@
 		scoreText.x = this.cameras.main.worldView.x;
 		scoreText.y = this.cameras.main.worldView.y;
 	
-		//part 7
+
 		//applies the velocity of the player character
 		 if (cursors.left.isDown)
         {
@@ -202,12 +200,12 @@
             player.setVelocityY(-400);
         }
 	}
-		//part 8
+
 		//allows the collected points to add to the "score" counter
 	    function collectStar (player, star)
 {
     star.disableBody(true, true);
-	//part 9
+
     //  updates the score
     score += 10;
     scoreText.setText('Score: ' + score);
@@ -238,7 +236,7 @@
 
 }
 
-//part 10
+
 //makes it so that when an enemy hit the player  
 function hitBomb (player, bomb)
 {
