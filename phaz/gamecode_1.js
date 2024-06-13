@@ -52,7 +52,7 @@
         this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
 		this.load.audio('bgmusic', 'assets/re-win.mp3');//background-music
 		this.load.audio('dingg','assets/ding-win.mp3');//point-ding
-		this.load.audio('deded','assets/ded.mp3');//point-ding
+		this.load.audio('deded','assets/ded.mp3');//death-ding
 	}
 
 
@@ -123,7 +123,6 @@
         });
 		//translates keyboard inputs into player character movement
 		cursors = this.input.keyboard.createCursorKeys();
-		//part 8
 		//physics for stars
 		stars = this.physics.add.group({
             key: 'star',
@@ -178,13 +177,13 @@
 		//applies the velocity of the player character
 		 if (cursors.left.isDown)
         {
-            player.setVelocityX(-400);
+            player.setVelocityX(-100);
 
             player.anims.play('left', true);
         }
         else if (cursors.right.isDown)
         {
-            player.setVelocityX(400);
+            player.setVelocityX(100);
 
             player.anims.play('right', true);
         }
@@ -197,7 +196,7 @@
 
         if (cursors.up.isDown && player.body.touching.down)
         {
-            player.setVelocityY(-400);
+            player.setVelocityY(-100);
         }
 	}
 
