@@ -5,13 +5,17 @@
 		//HTML5 canvas drawing tools
 		type: Phaser.AUTO,
 		//size of gamescreen in pixels
-		width: 800,
-		height: 600,
+		scale:{
+			autoCenter: Phaser.Scale.CENTER_BOTH,
+		width: 1400,
+		height: 800,
+		},
+		
 		 physics: {
         default: 'arcade',
 		//gravity
         arcade: {
-            gravity: { y: 500 },
+            gravity: { y: 1500 },
             debug: false
         }
     },
@@ -46,13 +50,13 @@
 	function preload ()
 	{
 		this.load.image('sky', 'assets/winxp2.png');	 //background
-        this.load.image('ground', 'assets/WinXP.png'); //platforms
-        this.load.image('star', 'assets/file.png');  //points
+        this.load.image('ground', 'assets/neon3.png'); //platforms
+        this.load.image('star', 'assets/cassette2.png');  //points
         this.load.image('bomb', 'assets/windowsxpcrash.png');  //enemies
         this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
-		this.load.audio('bgmusic', 'assets/re-win.mp3');//background-music
+		this.load.audio('bgmusic', 'assets/Vaporwave_BGM.mp3');//background-music
 		this.load.audio('dingg','assets/ding-win.mp3');//point-ding
-		this.load.audio('deded','assets/ded.mp3');//death-ding
+		this.load.audio('deded','assets/record3.mp3');//death-ding
 	}
 
 
@@ -177,13 +181,13 @@
 		//applies the velocity of the player character
 		 if (cursors.left.isDown)
         {
-            player.setVelocityX(-100);
+            player.setVelocityX(-750);
 
             player.anims.play('left', true);
         }
         else if (cursors.right.isDown)
         {
-            player.setVelocityX(100);
+            player.setVelocityX(750);
 
             player.anims.play('right', true);
         }
@@ -196,7 +200,7 @@
 
         if (cursors.up.isDown && player.body.touching.down)
         {
-            player.setVelocityY(-100);
+            player.setVelocityY(-750);
         }
 	}
 
