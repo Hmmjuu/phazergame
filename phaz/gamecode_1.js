@@ -55,7 +55,7 @@
         this.load.image('bomb', 'assets/skull2.png');  //enemies
         this.load.spritesheet('dude', 'assets/CFFull3.png', { frameWidth: 64, frameHeight: 78 });
 		this.load.audio('bgmusic', 'assets/Vaporwave_BGM.mp3');//background-music
-		this.load.audio('dingg','assets/ding-win.mp3');//point-ding
+		this.load.audio('dingg','assets/point_sfx2.mp3');//point-ding
 		this.load.audio('deded','assets/record3.mp3');//death-ding
 	}
 
