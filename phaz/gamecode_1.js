@@ -49,7 +49,7 @@
 	//load the files for game in advance
 	function preload ()
 	{
-		this.load.image('sky', 'assets/BGVapor.png');	 //background
+		this.load.image('sky', 'assets/BGVapor2.png');	 //background
         this.load.image('ground', 'assets/neon3.png'); //platforms
         this.load.image('star', 'assets/cassette2.png');  //points
         this.load.image('bomb', 'assets/skull2.png');  //enemies
@@ -145,7 +145,7 @@
 		 bombs = this.physics.add.group();
 
 		//score
-		scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+		scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#FFF' });
 		
 		//allows player to collide with platforms
         this.physics.add.collider(player, platforms);
