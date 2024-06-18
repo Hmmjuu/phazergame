@@ -49,11 +49,11 @@
 	//load the files for game in advance
 	function preload ()
 	{
-		this.load.image('sky', 'assets/winxp2.png');	 //background
+		this.load.image('sky', 'assets/BGVapor.png');	 //background
         this.load.image('ground', 'assets/neon3.png'); //platforms
         this.load.image('star', 'assets/cassette2.png');  //points
-        this.load.image('bomb', 'assets/windowsxpcrash.png');  //enemies
-        this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+        this.load.image('bomb', 'assets/skull2.png');  //enemies
+        this.load.spritesheet('dude', 'assets/CFFull3.png', { frameWidth: 64, frameHeight: 78 });
 		this.load.audio('bgmusic', 'assets/Vaporwave_BGM.mp3');//background-music
 		this.load.audio('dingg','assets/ding-win.mp3');//point-ding
 		this.load.audio('deded','assets/record3.mp3');//death-ding
@@ -100,7 +100,7 @@
         this.anims.create({
             key: 'left',
 			//shows frames 0-3
-            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 5 }),
 			//set how many frames of the sprtiesheet are shown per second
             frameRate: 10,
 			//makes possible to move infintely
@@ -111,7 +111,7 @@
 		//shows frame 4
         this.anims.create({
             key: 'turn',
-            frames: [ { key: 'dude', frame: 4 } ],
+            frames: [ { key: 'dude', frame: 6 } ],
             frameRate: 20
         });
 		
@@ -119,7 +119,7 @@
         this.anims.create({
             key: 'right',
 			//shows frames 5-8
-            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+            frames: this.anims.generateFrameNumbers('dude', { start: 7, end: 13 }),
 			//set how many frames of the sprtiesheet are shown per second
             frameRate: 10,
 			//makes possible to move infintely
